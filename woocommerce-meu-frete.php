@@ -1,7 +1,7 @@
 <?php
 
 /*
-Plugin Name: WooCommerce Meu Frete
+Plugin Name: Meu Frete para WooCommerce
 Plugin URI: https://agenciapiracanjuba.com.br
 Description: Integração com correios, SEDEX e PAC, cálculo do frete no carrinho e checkout
 Version: 0.1.0

@@ -20,7 +20,7 @@ class Single_Product_Shipping_Methods
 
         $product_id = $product->get_id();
 
-        include  plugin_dir_path(__DIR__) . 'templates/postcode.php';
+        include  plugin_dir_path(__DIR__) . 'templates/single-shipping-methods.php';
     }
 
     public function get_shipping_methods()
