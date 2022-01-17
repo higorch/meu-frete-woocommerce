@@ -1,0 +1,136 @@
+.wrap-timeline-order,
+.wrap-timeline-order .title,
+.wrap-timeline-order .timeline {
+    display: inline-block;
+    width: 100%;
+}
+.wrap-timeline-order .title h2 {
+    margin-top: 0;
+}
+.wrap-timeline-order .title .order_number {
+    color: #49c29a;
+}
+.wrap-timeline-order .timeline {
+    padding: 30px 0;
+    border: solid 1px #eee;
+    background: #f9f9f9;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.wrap-timeline-order .timeline ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    white-space: nowrap;
+    text-align: center;
+}
+.wrap-timeline-order .timeline ul li.stage {
+    display: inline-block;
+    width: 25%;
+    white-space: nowrap;
+}
+.wrap-timeline-order .timeline ul li.stage span.icon {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.wrap-timeline-order .timeline ul li.stage span.icon svg {
+    width: 40px;
+    height: 40px;
+    fill: #d7d7d7;
+}
+.wrap-timeline-order .timeline ul li.stage.active span.icon svg {
+    fill: #49c29a;
+}
+.wrap-timeline-order .timeline ul li.stage .details {
+    font-size: 0.85em;
+    font-weight: 400;
+    line-height: 20px;
+    display: block;
+    width: 100%;
+    color: #d7d7d7;
+    text-transform: uppercase;
+}
+.wrap-timeline-order .timeline ul li.stage.active .details {
+    color: #49c29a;
+}
+.wrap-timeline-order .timeline ul li.stage.active .details a {
+    color: black;;
+}
+
+/* single product */
+.mf-wrap-postcode-single {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    margin-top: 30px;
+    background: #fff;
+    border: solid 3px #f9f9f9;
+    padding: 30px;
+    text-align: center;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.mf-wrap-postcode-single .title {
+    color: #454545;
+    display: block;
+    white-space: normal;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.mf-wrap-postcode-single p.mf-msg {
+    display: block;
+    margin: 15px 0 0 0;
+}
+.mf-wrap-postcode-single .box-fields input[type="text"],
+.mf-wrap-postcode-single .box-fields button {
+    display: inline-block;
+    white-space: normal;
+    height: 50px;
+    vertical-align: middle;
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.mf-wrap-postcode-single .box-fields input[type="text"] {
+    width: 140px;
+    font-size: 1.2em;
+    margin-right: 15px;
+    color: #454545;
+    text-align: center;
+}
+.mf-wrap-postcode-single .box-fields button {
+    position: relative;
+    width: auto;
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    border-bottom: solid 3px #cccccc;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 8px 15px;
+}
+.mf-wrap-postcode-single .box-fields button:disabled {
+    opacity: .5;
+    pointer-events: none;
+}
+.mf-wrap-postcode-single ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #999999;
+    opacity: 1; /* Firefox */
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+.mf-wrap-postcode-single :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #999999;
+}
+.mf-wrap-postcode-single ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #999999;
+}
