@@ -13,13 +13,6 @@ class Mf_Cart_Shipping_Methods
 
      public function shipping_method_estimate_label($label, $method)
      {
-
-          // echo '<pre>';
-          // var_dump(WC()->cart->get_shipping_packages());
-          // echo '</pre>';
-          // exit;
-
-
           $label .= '<br /><small>';
 
           if ($method->method_id == 'mf_shipping_method_sedex') :

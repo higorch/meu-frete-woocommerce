@@ -116,11 +116,6 @@ class Single_Product_Shipping_Methods
         $package['applied_coupons'] = WC()->cart->applied_coupons;
         $package['user'] = ['ID' => get_current_user_id()];
 
-        // echo '<pre>';
-        // var_dump($package);
-        // echo '</pre>';
-        // exit;
-
         $packageRates = WC()->shipping->calculate_shipping_for_package($package, $cartId);
 
         foreach ($packageRates['rates'] as $key => $value) :
