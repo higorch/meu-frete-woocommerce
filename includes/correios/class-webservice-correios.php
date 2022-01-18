@@ -38,14 +38,14 @@ class Correios
 
     public function setCepOrigem($cepOrigem)
     {
-        $this->sCepOrigem = str_replace('-', '', $cepOrigem);
+        $this->sCepOrigem = preg_replace('/[^0-9]/', '', $cepOrigem);;
 
         return $this;
     }
 
     public function setCepDestino($cepDestino)
     {
-        $this->sCepDestino = str_replace('-', '', $cepDestino);
+        $this->sCepDestino = preg_replace('/[^0-9]/', '', $cepDestino);;
 
         return $this;
     }
