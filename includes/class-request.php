@@ -15,7 +15,7 @@ class Mf_Request
     {
         wp_enqueue_style('mf-single-style', plugin_dir_url(__DIR__) . 'assets/css/style.css');
 
-        wp_enqueue_script('mf-request', plugin_dir_url(__DIR__) . 'assets/js/request.js', array('jquery'), '1.0.0', true);
+        wp_enqueue_script('mf-request', plugin_dir_url(__DIR__) . 'assets/js/request.js', array('jquery'), '1.0.1', true);
         wp_localize_script('mf-request', 'mf_ajax', array('ajax_url' => admin_url('admin-ajax.php')));
     }
 }

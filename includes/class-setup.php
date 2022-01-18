@@ -17,7 +17,7 @@ class Setup
 
     public function enqueue_scripts()
     {
-        wp_enqueue_style('mf-style', plugin_dir_url(__DIR__) . 'assets/css/style.css', array(), '1.0.0');
+        wp_enqueue_style('mf-style', plugin_dir_url(__DIR__) . 'assets/css/style.css', array(), '1.0.1');
     }
 
     // remover produtos fora de estoque do carrinho

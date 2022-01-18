@@ -63,8 +63,8 @@ class Single_Product_Shipping_Methods
     public function load_shipping_methods(array $request)
     {
         $product = wc_get_product($request['product_id']);
-        $customer_postcode = str_replace('-', '', $request['mf-postcode']);
-        $quantity = $request['mf-single-quantity'];
+        $customer_postcode = str_replace('-', '', $request['postcode']);
+        $quantity = (int) $request['quantity'];
 
         $output = array();
 
@@ -97,26 +97,31 @@ class Single_Product_Shipping_Methods
         $price = wc_get_price_excluding_tax($product);
         $tax = wc_get_price_including_tax($product) - $price;
 
-        $package = [
-            'destination' => $destination,
-            'applied_coupons' => WC()->cart->applied_coupons,
-            'user' => ['ID' => get_current_user_id()],
-        ];
-
         $package['contents'] = [
             $cartId => [
+                'key' => $cartId,
                 'product_id' => $product->id,
-                'data' => $product,
+                'variation_id' => 402,
                 'quantity' => $quantity,
                 'line_total' => $price,
                 'line_tax' => $tax,
                 'line_subtotal' => $price,
                 'line_subtotal_tax' => $tax,
                 'contents_cost' => $price,
+                'data' => $request['variation_id'] == '' ?  $product : wc_get_product($request['variation_id']),
             ]
         ];
 
-        $packageRates = WC_Shipping::instance()->calculate_shipping_for_package($package, $cartId);
+        $package['destination'] = $destination;
+        $package['applied_coupons'] = WC()->cart->applied_coupons;
+        $package['user'] = ['ID' => get_current_user_id()];
+
+        // echo '<pre>';
+        // var_dump($package);
+        // echo '</pre>';
+        // exit;
+
+        $packageRates = WC()->shipping->calculate_shipping_for_package($package, $cartId);
 
         foreach ($packageRates['rates'] as $key => $value) :
 
