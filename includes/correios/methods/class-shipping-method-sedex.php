@@ -96,7 +96,7 @@ class Shipping_Method_Sedex extends WC_Shipping_Method
 
         $sedex = $correios->setCodigoEmpresa($this->get_option('company_code'))
             ->setSenhaEmpresa($this->get_option('company_password'))
-            ->setCepOrigem($this->get_option('zip_code'))
+            ->setCepOrigem($this->get_store_postcode())
             ->setCepDestino($this->get_customer_postcode($package))
             ->setFormatoEncomenda(1) // caixa/pacote
             ->setCodigoServico('04014') // SEDEX
@@ -151,5 +151,13 @@ class Shipping_Method_Sedex extends WC_Shipping_Method
         $postal_code = $package['destination']['postcode'];
 
         return $postal_code;
+    }
+
+    /**
+     * Obter o cep de origem
+     */
+    public function get_store_postcode()
+    {
+        return !empty($this->get_option('zip_code')) ? $this->get_option('zip_code') : WC()->countries->get_base_postcode();
     }
 }

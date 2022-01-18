@@ -21,8 +21,7 @@ include plugin_dir_path(__FILE__) . 'includes/class-metabox.php';
 include plugin_dir_path(__FILE__) . 'includes/correios/class-webservice-correios.php';
 include plugin_dir_path(__FILE__) . 'includes/class-request.php';
 
-add_action('wp_loaded', function () 
-{
+add_action('wp_loaded', function () {
     include plugin_dir_path(__FILE__) . 'includes/class-shipping-methods-init.php';
     include plugin_dir_path(__FILE__) . 'includes/class-mf-cart-shipping-methods.php';
     include plugin_dir_path(__FILE__) . 'includes/class-hide-others-shipping-free-available.php';
