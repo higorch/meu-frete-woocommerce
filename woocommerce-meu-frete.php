@@ -24,7 +24,7 @@ include plugin_dir_path(__FILE__) . 'includes/class-request.php';
 add_action('wp_loaded', function () 
 {
     include plugin_dir_path(__FILE__) . 'includes/class-shipping-methods-init.php';
-    include plugin_dir_path(__FILE__) . 'includes/class-estimate-shipping.php';
+    include plugin_dir_path(__FILE__) . 'includes/class-mf-cart-shipping-methods.php';
     include plugin_dir_path(__FILE__) . 'includes/class-hide-others-shipping-free-available.php';
     include plugin_dir_path(__FILE__) . 'includes/class-timeline-order.php';
     include plugin_dir_path(__FILE__) . 'includes/class-single-product-shipping-methods.php';
